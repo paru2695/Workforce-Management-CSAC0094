@@ -99,7 +99,7 @@
                         <td class="auto-style20">
                             <asp:Label ID="Label2" runat="server" Text="Email Address"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" ClientIDMode="Static" TextMode="Email"></asp:TextBox>
                         </td>
                         <td class="auto-style12"></td>
                     </tr>
@@ -110,7 +110,7 @@
                         <td class="auto-style14">
                             <asp:Label ID="Label3" runat="server" Text="Password"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
                         </td>
                         <td class="auto-style10"></td>
                     </tr>
@@ -137,7 +137,7 @@
                         <td class="auto-style17">
                             <asp:Label ID="Label6" runat="server" Text="D.O.B"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox5" runat="server" TextMode="Date"></asp:TextBox>
                         </td>
                         <td class="auto-style18">
                             <asp:Button ID="Button6" runat="server" Text="Request Elevated Access" />
@@ -159,7 +159,7 @@
                         <td class="auto-style21">
                             <asp:Label ID="Label8" runat="server" Text="Phone Number"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox6" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -186,7 +186,8 @@
                     <tr>
                         <td class="auto-style11"></td>
                         <td class="auto-style13">
-                            <asp:Button ID="Button5" runat="server" Text="Edit" />
+                            <asp:Button ID="Button5" runat="server" Text="Edit" OnClick="Button5_Click" />
+                            <asp:Label ID="Label11" runat="server"></asp:Label>
                         </td>
                         <td class="auto-style12"></td>
                     </tr>

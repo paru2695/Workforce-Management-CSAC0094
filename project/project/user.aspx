@@ -53,7 +53,7 @@
                             <strong>
                             <asp:Label ID="Label2" runat="server" Text="Email Address"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" TextMode="Email"></asp:TextBox>
                         </td>
                         <td class="auto-style12"></td>
                     </tr>
@@ -65,7 +65,9 @@
                             <strong>
                             <asp:Label ID="Label3" runat="server" Text="Password"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                        &nbsp;
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Attention! Password must have atleast 8 characters including atleast 1 numeric character, atleast 1 lowercase letter, atleast 1 uppercase letter, atleast 1 special character" ForeColor="Red" ValidationExpression="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&amp;*-]).{8,}$"></asp:RegularExpressionValidator>
                         </td>
                         <td class="auto-style10"></td>
                     </tr>
@@ -95,7 +97,7 @@
                             <strong>
                             <asp:Label ID="Label6" runat="server" Text="D.O.B"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox5" runat="server" TextMode="Date"></asp:TextBox>
                         </td>
                         <td class="auto-style18">
                             &nbsp;</td>
@@ -118,7 +120,7 @@
                             <strong>
                             <asp:Label ID="Label8" runat="server" Text="Phone Number"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox6" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                         <td>&nbsp;</td>
                     </tr>

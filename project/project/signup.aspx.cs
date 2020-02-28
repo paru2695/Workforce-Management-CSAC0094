@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -36,11 +36,16 @@ namespace project
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "insert into Signup values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "')";
+                cmd.CommandText = "insert into Signup values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "');" +
+                                   "insert into Loginn values('" + TextBox3.Text + "','" + TextBox5.Text + "')";
+
+
                 cmd.ExecuteNonQuery();
                 con.Close();
 
+                Response.Redirect("login.aspx");
 
+                
 
             }
         }

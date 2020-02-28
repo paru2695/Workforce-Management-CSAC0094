@@ -42,9 +42,10 @@
                     </tr>
                     <tr>
                         <td class="auto-style4">
-                            <asp:Button ID="Button4" runat="server" Text="My profile" />
+                            <asp:Button ID="Button4" runat="server" Text="My profile" OnClick="Button4_Click" PostBackUrl="~/userrequest.aspx" />
                         </td>
-                        <td>Welcome Regular User</td>
+                        <td>
+                            Welcome Regular User</td>
                     </tr>
                 </table>
             </h2>

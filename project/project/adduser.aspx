@@ -147,6 +147,9 @@
                             </td>
                             <td class="auto-style12">
                                 <asp:DropDownList ID="DropDownList1" runat="server">
+                                    <asp:ListItem>Administrator</asp:ListItem>
+                                    <asp:ListItem>Recruiter</asp:ListItem>
+                                    <asp:ListItem>Supervisor</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -164,6 +167,11 @@
                             </td>
                             <td class="auto-style12">
                                 <asp:DropDownList ID="DropDownList2" runat="server">
+                                    <asp:ListItem>Information Technology</asp:ListItem>
+                                    <asp:ListItem>Technology</asp:ListItem>
+                                    <asp:ListItem>Banking</asp:ListItem>
+                                    <asp:ListItem>Food And Restaurant</asp:ListItem>
+                                    <asp:ListItem>Mechanical Technician</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -177,7 +185,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style6">
-                                <asp:Button ID="Button5" runat="server" Text="save" />
+                                <asp:Button ID="Button5" runat="server" Text="save" OnClick="Button5_Click" />
                             </td>
                             <td class="auto-style13">
                                 <asp:Button ID="Button6" runat="server" Text="Cancel" />

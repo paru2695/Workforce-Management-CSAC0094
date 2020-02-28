@@ -7,12 +7,12 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 28%;
+            width: 34%;
             height: 71px;
             margin-left: 384px;
         }
         .auto-style2 {
-            width: 140px;
+            width: 137px;
         }
     </style>
 </head>
@@ -30,7 +30,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Username"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -47,6 +47,13 @@
                     </td>
                     <td>
                         <asp:Button ID="Button2" runat="server" PostBackUrl="~/signup.aspx" Text="signup" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        &nbsp;</td>
+                    <td>
+                        <asp:Label ID="Label4" runat="server"></asp:Label>
                     </td>
                 </tr>
             </table>

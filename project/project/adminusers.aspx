@@ -24,10 +24,6 @@
         .auto-style5 {
             width: 407px;
         }
-        .auto-style6 {
-            text-align: right;
-            height: 35px;
-        }
         .auto-style7 {
             width: 126px;
             height: 91px;
@@ -43,14 +39,6 @@
         .auto-style10 {
             font-weight: normal;
             font-size: medium;
-        }
-        .auto-style11 {
-            width: 126px;
-            height: 35px;
-        }
-        .auto-style12 {
-            width: 407px;
-            height: 35px;
         }
         .auto-style13 {
             width: 126px;
@@ -70,6 +58,29 @@
         .auto-style17 {
             text-align: right;
         }
+        .auto-style20 {
+            height: 38px;
+        }
+        .auto-style21 {
+            width: 126px;
+            height: 38px;
+        }
+        .auto-style22 {
+            width: 407px;
+            height: 38px;
+        }
+        .auto-style23 {
+            width: 126px;
+            height: 31px;
+        }
+        .auto-style24 {
+            width: 407px;
+            height: 31px;
+        }
+        .auto-style25 {
+            text-align: right;
+            height: 31px;
+        }
     </style>
 </head>
 <body>
@@ -82,11 +93,11 @@
                 <br />
                 <table class="auto-style3">
                     <tr>
-                        <td class="auto-style4">
+                        <td class="auto-style21">
                             <asp:Button ID="Button1" runat="server" Text="Welcome" Width="100px" />
                         </td>
-                        <td class="auto-style5">&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <td class="auto-style22"></td>
+                        <td class="auto-style20"></td>
                     </tr>
                     <tr>
                         <td class="auto-style4">
@@ -98,12 +109,12 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="auto-style11">
+                        <td class="auto-style23">
                             <asp:Button ID="Button3" runat="server" Text="Users" Width="100px" />
                         </td>
-                        <td class="auto-style12">
-                            &nbsp;</td>
-                        <td class="auto-style6">
+                        <td class="auto-style24">
+                            </td>
+                        <td class="auto-style25">
                             <asp:Button ID="Button8" runat="server" Text="Create" Width="93px" />
 &nbsp;
                             <asp:Button ID="Button4" runat="server" Text="View" Width="100px" />
