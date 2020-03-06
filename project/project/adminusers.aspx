@@ -7,9 +7,9 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 608px;
+            height: 1298px;
             text-align: center;
-            width: 1059px;
+            width: 1424px;
         }
         .auto-style2 {
             font-size: larger;
@@ -85,23 +85,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-         <div class="auto-style1">
+         <div class="auto-style1" style="background-image: url('images/signup.png')">
             <h2 class="auto-style17">
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style2" Text="Workforce Management"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button10" runat="server" Text="Logout" PostBackUrl="~/login.aspx" />
+                <asp:Button ID="Button10" runat="server" Text="Logout" PostBackUrl="~/login.aspx" Height="22px" Width="128px" />
              </h2>
                 <br />
                 <table class="auto-style3">
                     <tr>
                         <td class="auto-style21">
-                            <asp:Button ID="Button1" runat="server" Text="Welcome" Width="100px" />
+                            <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" />
                         </td>
                         <td class="auto-style22"></td>
                         <td class="auto-style20"></td>
                     </tr>
                     <tr>
                         <td class="auto-style4">
-                            <asp:Button ID="Button2" runat="server" Text="My Profile" Width="100px" />
+                            <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" />
                         </td>
                         <td class="auto-style5"><strong>
                             <asp:Label ID="Label2" runat="server" Text="USERS" CssClass="auto-style16"></asp:Label>
@@ -110,23 +110,23 @@
                     </tr>
                     <tr>
                         <td class="auto-style23">
-                            <asp:Button ID="Button3" runat="server" Text="Users" Width="100px" />
+                            <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" Height="22px" />
                         </td>
                         <td class="auto-style24">
                             </td>
                         <td class="auto-style25">
-                            <asp:Button ID="Button8" runat="server" Text="Create" Width="93px" />
+                            <asp:Button ID="Button8" runat="server" Text="Create" Width="128px" Height="22px" />
 &nbsp;
-                            <asp:Button ID="Button4" runat="server" Text="View" Width="100px" />
+                            <asp:Button ID="Button4" runat="server" Text="View" Width="128px" Height="22px" />
 &nbsp;
-                            <asp:Button ID="Button5" runat="server" Height="26px" Text="Edit" Width="92px" />
+                            <asp:Button ID="Button5" runat="server" Height="22px" Text="Edit" Width="128px" />
                         &nbsp;&nbsp;
-                            <asp:Button ID="Button7" runat="server" Text="Delete" Width="78px" />
+                            <asp:Button ID="Button7" runat="server" Text="Delete" Width="128px" Height="22px" />
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style13">
-                            <asp:Button ID="Button9" runat="server" Text="Access Requests" Width="100px" PostBackUrl="~/AccessRequests.aspx" />
+                            <asp:Button ID="Button9" runat="server" Text="Access Requests" Width="128px" PostBackUrl="~/AccessRequests.aspx" Height="22px" />
                         </td>
                         <td class="auto-style14">
                         </td>
@@ -148,10 +148,25 @@
                             <br />
                             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 &nbsp;
-                            <asp:Button ID="Button6" runat="server" Text="Search" />
+                            <asp:Button ID="Button6" runat="server" Text="Search" Height="22px" Width="128px" OnClick="Button6_Click" />
                         </td>
                     </tr>
                 </table>
+            
+
+            
+             <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                 <Columns>
+                     <asp:BoundField DataField="EmailAddress" HeaderText="EmailAddress" SortExpression="EmailAddress" />
+                     <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
+                     <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                     <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
+                     <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                 </Columns>
+             </asp:GridView>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [EmailAddress], [Password], [LastName], [DOB], [FirstName] FROM [Users1]"></asp:SqlDataSource>
+            
+
             
         </div>
     </form>

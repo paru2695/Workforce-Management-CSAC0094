@@ -83,12 +83,34 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="images\214-2140212_businessman-wallpapers-business-man.jpg" />
+    <Content Include="images\adduser.jpg" />
+    <Content Include="images\admin.jpg" />
+    <Content Include="images\admin11.jpg" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\elevated.jpg" />
+    <Content Include="images\elevated1.jpg" />
+    <Content Include="images\fff4444.jpg" />
+    <Content Include="images\fffffff.jpg" />
+    <Content Include="images\FINAL.jpg" />
+    <Content Include="images\final2.jpg" />
+    <Content Include="images\Jellyfish.jpg" />
+    <Content Include="images\loginpic1.jpg" />
     <Content Include="elevatedatausers.aspx" />
     <Content Include="edituser.aspx" />
+    <Content Include="images\photo-1533450718592-29d45635f0a9 %281%29.jpg" />
+    <Content Include="images\req.jpg" />
+    <Content Include="images\request user.jpeg" />
+    <Content Include="images\request11.jpg" />
+    <Content Include="images\signup.png" />
+    <Content Include="images\uuuuuuuu.jpg" />
+    <Content Include="images\welcomeuser.jpg" />
     <Content Include="signup.aspx" />
     <Content Include="user.aspx" />
     <Content Include="userrequest.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="login.aspx" />
     <Content Include="welcomeadmin.aspx" />
     <Content Include="Welcomeelevated.aspx" />
@@ -182,6 +204,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\despaired-2261021_960_720.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -190,6 +213,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

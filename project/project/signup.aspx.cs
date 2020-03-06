@@ -20,8 +20,8 @@ namespace project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-           
 
+            DateTime date = DateTime.Parse(TextBox4.Text);
             bool ok = CaptchaBox.Validate(TextBox7.Text);
             TextBox7.Text = null;
             if (!ok)
@@ -34,10 +34,12 @@ namespace project
                 Label8.ForeColor = System.Drawing.Color.Green;
                 Label8.Text = "Valid";
                 con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "insert into Signup values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "');" +
-                                   "insert into Loginn values('" + TextBox3.Text + "','" + TextBox5.Text + "')";
+                SqlCommand cmd = new SqlCommand("insert into Users1(EmailAddress,Password,FirstName,LastName,DOB) values (@EmailAddress,@Password,@FirstName,@LastName,@DOB)", con);
+                cmd.Parameters.AddWithValue("@EmailAddress", TextBox3.Text);
+                cmd.Parameters.AddWithValue("@Password", TextBox5.Text);
+                cmd.Parameters.AddWithValue("@FirstName", TextBox1.Text);
+                cmd.Parameters.AddWithValue("@LastName", TextBox2.Text);
+                cmd.Parameters.AddWithValue("@DOB", date);
 
 
                 cmd.ExecuteNonQuery();

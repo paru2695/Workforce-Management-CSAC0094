@@ -35,7 +35,7 @@ namespace project
         public void showData()
         {
             con.Open();
-            cmd.CommandText = "Select * from Signup where EmailAddress = '" + Session["user"] + "' ";
+            cmd.CommandText = "Select * from Users1 where EmailAddress = '" + Session["user"] + "' ";
             cmd.Connection = con;
             sda.SelectCommand = cmd;
             sda.Fill(ds);
@@ -43,7 +43,7 @@ namespace project
             TextBox2.Text = ds.Tables[0].Rows[0]["Password"].ToString();
             TextBox3.Text = ds.Tables[0].Rows[0]["FirstName"].ToString();
             TextBox4.Text = ds.Tables[0].Rows[0]["LastName"].ToString();
-            TextBox5.Text = ds.Tables[0].Rows[0]["D.O.B"].ToString();
+            TextBox5.Text = ds.Tables[0].Rows[0]["DOB"].ToString();
             con.Close();
 
 

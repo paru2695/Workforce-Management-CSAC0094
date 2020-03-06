@@ -1,2 +1,1 @@
-﻿Delete from Signup
-where FirstName = 'Navpreet';
+﻿DELETE FROM USERS1

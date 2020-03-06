@@ -34,7 +34,7 @@ namespace project
         {
             string user = TextBox1.Text.Trim();
             con.Open();
-            cmd.CommandText = "Select * from Signup where EmailAddress = '" + TextBox1.Text + "' and Password = '" + TextBox2.Text + "' ";
+            cmd.CommandText = "Select * from Users1 where EmailAddress = '" + TextBox1.Text + "' and Password = '" + TextBox2.Text + "' ";
             cmd.Connection = con;
             sda.SelectCommand = cmd;
             sda.Fill(ds, "Signup");
@@ -53,31 +53,10 @@ namespace project
             }
             
 
-            switch (user)
-            {
-                case "Paruwaraich@gmail.com":
-                    {
-                        welcomeadmin f = new welcomeadmin();
-                        f.showData();
-                    }
+        }
 
-                    break;
-                case "navdeep@gmail.com":
-                    {
-                        Welcomeelevated f1 = new Welcomeelevated();
-                        f1.showData();
-                    }
-
-                    break;
-                case "veerpaldhillon3297@gmail.com":
-                    {
-                        welcomeregular f2 = new welcomeregular();
-                        f2.showData();
-                    }
-
-                    break;
-
-            }
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
         }
     }

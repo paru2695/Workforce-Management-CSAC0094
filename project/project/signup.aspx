@@ -8,12 +8,8 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 588px;
+            height: 1211px;
             text-align: center;
-        }
-
-        .auto-style2 {
-            font-size: larger;
         }
 
         .auto-style3 {
@@ -25,46 +21,6 @@
             font-size: large;
         }
 
-        .auto-style25 {
-            width: 194px;
-            height: 57px;
-        }
-        .auto-style26 {
-            width: 194px;
-            height: 41px;
-        }
-        .auto-style27 {
-            width: 194px;
-            height: 50px;
-        }
-        .auto-style30 {
-            width: 194px;
-            height: 52px;
-        }
-        .auto-style33 {
-            width: 194px;
-            height: 37px;
-        }
-        .auto-style36 {
-            width: 194px;
-            height: 48px;
-        }
-        .auto-style38 {
-            width: 228px;
-            height: 48px;
-        }
-        .auto-style39 {
-            width: 228px;
-            height: 37px;
-        }
-        .auto-style40 {
-            width: 228px;
-            height: 50px;
-        }
-        .auto-style41 {
-            width: 228px;
-            height: 57px;
-        }
         .auto-style43 {
             width: 228px;
             height: 41px;
@@ -73,132 +29,159 @@
             width: 228px;
             height: 52px;
         }
-        .auto-style45 {
-            width: 1180px;
-            height: 48px;
-        }
-        .auto-style46 {
-            width: 1180px;
-            height: 37px;
-        }
-        .auto-style47 {
-            width: 1180px;
-            height: 50px;
-        }
-        .auto-style48 {
-            width: 1180px;
-            height: 57px;
-        }
         .auto-style50 {
-            width: 1180px;
+            width: 330px;
             height: 41px;
         }
         .auto-style51 {
-            width: 1180px;
-            height: 52px;
+             width: 330px;
+            height: 40px;
         }
-        .auto-style52 {
-            width: 194px;
-            height: 1px;
+        .auto-style6 {
+            font-size: 50px;
+            margin-left: 0px;
         }
-        .auto-style53 {
-            width: 1180px;
-            height: 1px;
-        }
-        .auto-style54 {
+        .auto-style58 {
+        
             width: 228px;
             height: 1px;
+        }
+        .auto-style59 {
+            width: 142px;
+            height: 40px;
+        }
+        .auto-style60 {
+            width: 142px;
+            height: 1px;
+        }
+        .auto-style61 {
+            width: 142px;
+            height: 52px;
+        }
+        .auto-style62 {
+            width: 142px;
+            height: 41px;
+        }
+        .auto-style63 {
+            font-weight: bold;
+            font-size: medium;
+        }
+        .auto-style64 {
+            width: 228px;
+            height: 1px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="auto-style1">
+        <div class="auto-style1" style="background-image: url('images/signup.png')">
             <h2>
-                <asp:Label ID="Label1" runat="server" CssClass="auto-style2" Text="Workforce Management"></asp:Label>
+                <strong>
+                <asp:Label ID="Label9" runat="server" CssClass="auto-style6" Height="72px" Text="Workforce Management" Width="536px"></asp:Label>
+                </strong>
             </h2>
             <table class="auto-style3">
                 <tr>
-                    <td class="auto-style36">
+                    <td class="auto-style59">
+                        <strong>
                         <asp:Label ID="Label2" runat="server" CssClass="auto-style4" Text="First name"></asp:Label>
+                        </strong>
                     </td>
-                    <td class="auto-style45">
+                    <td class="auto-style51">
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Height="22px" Width="128px"></asp:TextBox>
                     </td>
-                    <td class="auto-style38"></td>
+                    <td class="auto-style58"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style33">
+                    <td class="auto-style59">
+                        <strong>
                         <asp:Label ID="Label3" runat="server" Text="Last name"></asp:Label>
+                        </strong>
                     </td>
-                    <td class="auto-style46">
+                    <td class="auto-style51">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" Height="22px" Width="128px"></asp:TextBox>
                     </td>
-                    <td class="auto-style39"></td>
+                    <td class="auto-style58"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style27">
+                    <td class="auto-style59">
+                        <strong>
                         <asp:Label ID="Label4" runat="server" Text="Email"></asp:Label>
+                        </strong>
                     </td>
-                    <td class="auto-style47">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <td class="auto-style51">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="TextBox3" runat="server" Height="22px" Width="128px"></asp:TextBox>
+                        &nbsp;&nbsp;
+                        <br />
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="Invalid Email!" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </td>
-                    <td class="auto-style40"></td>
+                    <td class="auto-style58"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style25">
+                    <td class="auto-style59">
+                        <strong>
                         <asp:Label ID="Label5" runat="server" Text="D.O.B"></asp:Label>
+                        </strong>
                     </td>
-                    <td class="auto-style48">
+                    <td class="auto-style51">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox4" runat="server" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="TextBox4" runat="server" TextMode="Date" Height="22px" Width="128px"></asp:TextBox>
                     </td>
-                    <td class="auto-style41">
-                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-                    </td>
+                    <td class="auto-style64">
+                        <asp:TextBox ID="TextBox7" runat="server" Height="22px" Width="244px"></asp:TextBox>
+                   
+                        </td>
                 </tr>
                 <tr>
-                    <td class="auto-style52">
+                    <td class="auto-style60">
+                        <strong>
                         <asp:Label ID="Label6" runat="server" Text="Password"></asp:Label>
+                        </strong>
                     </td>
-                    <td class="auto-style53">
+                    <td class="auto-style51">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox5" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="TextBox5" runat="server" TextMode="Password" Height="22px" Width="128px"></asp:TextBox>
                         <br />
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox5" ErrorMessage="Attention! Password must have atleast 8 characters including atleast 1 numeric character, atleast 1 lowercase letter, atleast 1 uppercase letter, atleast 1 special character" ForeColor="Red" ValidationExpression="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&amp;*-]).{8,}$"></asp:RegularExpressionValidator>
                     </td>
-                    <td class="auto-style54">
+                    <td class="auto-style64">
+                   
                         <BotDetect:WebFormsCaptcha ID="CaptchaBox" runat="server" Height="26px" />
                     </td>
                     </tr>
                 <tr>
-                    <td class="auto-style26">
+                    <td class="auto-style59">
+                        <strong>
                         <asp:Label ID="Label7" runat="server" Text="Confirm password"></asp:Label>
-                    </td>
-                    <td class="auto-style50">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="TextBox6" runat="server" TextMode="Password"></asp:TextBox>
-                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox5" ControlToValidate="TextBox6" ErrorMessage="Sorry,Password should match." ForeColor="Red"></asp:CompareValidator>
-                    </td>
-                    <td class="auto-style43">
-                        &nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style30">
+                        </strong>
                     </td>
                     <td class="auto-style51">
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Signup" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox6" runat="server" TextMode="Password" Height="22px" Width="128px"></asp:TextBox>
+                        &nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox5" ControlToValidate="TextBox6" ErrorMessage="Sorry,Password should match." ForeColor="Red"></asp:CompareValidator>
+                    </td>
+                    <td class="auto-style58" style="background-position: top; background-image: none; color: #FFFFFF; background-color: #FFFFFF;">
+                        </td>
+                </tr>
+                <tr>
+                    <td class="auto-style61">
+                    </td>
+                    <td class="auto-style51">
+                        <strong>
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Signup" CssClass="auto-style63" />
+                        </strong>
                     </td>
                     <td class="auto-style44">
                         <asp:Label ID="Label8" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style26"></td>
+                    <td class="auto-style62"></td>
                     <td class="auto-style50">
                         &nbsp;</td>
                     <td class="auto-style43"></td>
