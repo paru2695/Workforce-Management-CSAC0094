@@ -172,7 +172,7 @@
                         </td>
                         <td class="auto-style18">
                             <strong>
-                            <asp:Button ID="Button6" runat="server" Text="Request Elevated Access" CssClass="auto-style24" Height="22px" Width="209px" />
+                            <asp:Button ID="Button6" runat="server" Text="Request Elevated Access" CssClass="auto-style24" Height="22px" Width="209px" OnClick="Button6_Click" />
                             </strong>
                         </td>
                     </tr>
@@ -188,7 +188,9 @@
                                 <asp:ListItem>Supervisior</asp:ListItem>
                             </asp:DropDownList>
                         </td>
-                        <td class="auto-style27"></td>
+                        <td class="auto-style27">
+                            <asp:Label ID="Label12" runat="server" Text="Active" Visible="False"></asp:Label>
+                        </td>
                     </tr>
                     <tr>
                         <td class="auto-style8">&nbsp;</td>

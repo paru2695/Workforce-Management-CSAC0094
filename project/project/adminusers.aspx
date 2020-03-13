@@ -81,6 +81,9 @@
             text-align: right;
             height: 31px;
         }
+        .auto-style26 {
+            margin-left: 285px;
+        }
     </style>
 </head>
 <body>
@@ -121,7 +124,7 @@
 &nbsp;
                             <asp:Button ID="Button5" runat="server" Height="22px" Text="Edit" Width="128px" />
                         &nbsp;&nbsp;
-                            <asp:Button ID="Button7" runat="server" Text="Delete" Width="128px" Height="22px" />
+                            <asp:Button ID="Button7" runat="server" Text="Delete" Width="128px" Height="22px" OnClick="Button7_Click" />
                         </td>
                     </tr>
                     <tr>
@@ -140,8 +143,9 @@
                             <br />
                             <asp:Label ID="Label3" runat="server" CssClass="auto-style10" Text="Department"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:DropDownList ID="DropDownList1" runat="server" Width="153px">
+                            <asp:DropDownList ID="DropDownList1" runat="server" Width="153px" DataSourceID="SqlDataSource2" DataTextField="Name" DataValueField="Name">
                             </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name] FROM [Department]"></asp:SqlDataSource>
                         </td>
                         <td class="auto-style9">
                             <br />
@@ -155,16 +159,45 @@
             
 
             
-             <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+             
+            
+
+            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="auto-style26" Width="609px">
+                 <AlternatingRowStyle BackColor="White" />
                  <Columns>
-                     <asp:BoundField DataField="EmailAddress" HeaderText="EmailAddress" SortExpression="EmailAddress" />
-                     <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-                     <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-                     <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
-                     <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                     <asp:TemplateField>
+                         <ItemTemplate>
+                             <asp:CheckBox ID="CheckBox1" runat="server" />
+                         </ItemTemplate>
+                     </asp:TemplateField>
+                     <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" >
+                     <ItemStyle HorizontalAlign="Center" />
+                     </asp:BoundField>
+                     <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" >
+                     <ItemStyle HorizontalAlign="Center" />
+                     </asp:BoundField>
+                     <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" >
+                     <ItemStyle HorizontalAlign="Center" />
+                     </asp:BoundField>
+                     <asp:BoundField DataField="AccessType" HeaderText="AccessType" SortExpression="AccessType" >
+                     <ItemStyle HorizontalAlign="Center" />
+                     </asp:BoundField>
+                     <asp:BoundField DataField="Name" HeaderText="Department" SortExpression="Name" >
+                     <ItemStyle HorizontalAlign="Center" />
+                     </asp:BoundField>
                  </Columns>
+                 <EditRowStyle BackColor="#2461BF" />
+                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                 <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                 <RowStyle BackColor="#EFF3FB" />
+                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                 <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                 <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
              </asp:GridView>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [EmailAddress], [Password], [LastName], [DOB], [FirstName] FROM [Users1]"></asp:SqlDataSource>
+             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Users1.FirstName, Users1.LastName, Users1.Id, Users1.AccessType, Department.Name FROM Users1 INNER JOIN Department ON Users1.Id = Department.Id"></asp:SqlDataSource>
             
 
             

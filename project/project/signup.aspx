@@ -183,7 +183,8 @@
                 <tr>
                     <td class="auto-style62"></td>
                     <td class="auto-style50">
-                        &nbsp;</td>
+                        <asp:Label ID="Label10" runat="server" Text="Label" Visible="False"></asp:Label>
+                    </td>
                     <td class="auto-style43"></td>
                 </tr>
             </table>

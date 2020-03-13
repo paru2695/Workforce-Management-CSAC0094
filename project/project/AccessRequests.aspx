@@ -70,6 +70,9 @@
         .auto-style17 {
             text-align: center;
         }
+        .auto-style18 {
+            margin-left: 291px;
+        }
     </style>
 </head>
 <body style="width: 1029px">
@@ -143,6 +146,31 @@
                         </td>
                     </tr>
                 </table>
+            
+            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" CssClass="auto-style18" DataSourceID="SqlDataSource1" Width="942px">
+                <Columns>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:CheckBox ID="CheckBox1" runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField DataField="RequestId" HeaderText="RequestId" SortExpression="RequestId" />
+                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                    <asp:BoundField DataField="RequestStatus" HeaderText="RequestStatus" SortExpression="RequestStatus" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                </Columns>
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Users1.FirstName, Users1.LastName, Users1.RequestId, Users1.RequestStatus, Department.Name FROM Users1 INNER JOIN Department ON Users1.RequestId = Department.Id"></asp:SqlDataSource>
             
         </div>
     </form>

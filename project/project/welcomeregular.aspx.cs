@@ -36,7 +36,7 @@ namespace project
         public void showData()
         {
             con.Open();
-            cmd.CommandText = "Select * from Signup where EmailAddress = '" + Session["user"] + "' ";
+            cmd.CommandText = "Select * from Users1 where EmailAddress = '" + Session["user"] + "' ";
             cmd.Connection = con;
             sda.SelectCommand = cmd;
             sda.Fill(ds);

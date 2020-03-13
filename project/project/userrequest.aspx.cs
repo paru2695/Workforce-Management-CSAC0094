@@ -61,7 +61,17 @@ namespace project
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update Users1 set RequestStatus ='"+Label12.Text+ "' where EmailAddress = '" + Session["user"] + "' ");
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
+
         }
+    }
     }
 
     
