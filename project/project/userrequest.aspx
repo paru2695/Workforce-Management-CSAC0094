@@ -186,8 +186,7 @@
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:DropDownList ID="DropDownList1" runat="server" CssClass="auto-style19" Height="22px" Width="128px">
                                 <asp:ListItem>Recruiter</asp:ListItem>
-                                <asp:ListItem>Administrator</asp:ListItem>
-                                <asp:ListItem>Supervisior</asp:ListItem>
+                                <asp:ListItem></asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         <td class="auto-style27">
@@ -209,13 +208,14 @@
                             <strong>
                             <asp:Label ID="Label9" runat="server" Text="Department"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:DropDownList ID="DropDownList2" runat="server" CssClass="auto-style19" Height="22px" Width="128px">
+                            <asp:DropDownList ID="DropDownList2" runat="server" CssClass="auto-style19" Height="22px" Width="128px" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name">
                                 <asp:ListItem>Information Technology</asp:ListItem>
                                 <asp:ListItem>Technology</asp:ListItem>
                                 <asp:ListItem>Mechanical Technician</asp:ListItem>
                                 <asp:ListItem>Food and Restaurant</asp:ListItem>
                                 <asp:ListItem>Banking</asp:ListItem>
                             </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name] FROM [Department]"></asp:SqlDataSource>
                         </td>
                         <td>&nbsp;</td>
                     </tr>

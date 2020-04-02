@@ -18,16 +18,17 @@ namespace project
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
             getId();
             if (Session["userid"] == null)
             {
                 Response.Redirect("login.aspx");
             }
-            else
-            {
-                showData();
-            }
+
+            if (!IsPostBack)
+            showData();
+            
+            
+            
         }
 
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\satnam\source\repos\project\project\App_Data\Database1.mdf;Integrated Security=True");
@@ -46,7 +47,10 @@ namespace project
             TextBox5.Text = ds.Tables[0].Rows[0]["DOB"].ToString();
             DropDownList1.DataTextField = ds.Tables[0].Rows[0]["AccessType"].ToString();
             TextBox6.Text = ds.Tables[0].Rows[0]["PhoneNumber"].ToString();
-            DropDownList2.DataTextField = ds.Tables[0].Rows[0]["Department"].ToString();
+            if (DropDownList2.Items.FindByValue(ds.Tables[0].Rows[0]["Department"].ToString().Trim()) != null)
+            {
+                DropDownList2.SelectedValue = ds.Tables[0].Rows[0]["Department"].ToString().Trim();
+            }
             TextBox7.Text = ds.Tables[0].Rows[0]["Address"].ToString();
             con.Close();
 

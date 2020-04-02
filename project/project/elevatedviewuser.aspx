@@ -121,6 +121,8 @@
                     </strong></td>
                 <td>
                     <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="125px">
+                        <asp:ListItem>Recruiter</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -139,8 +141,9 @@
                     <asp:Label ID="Label9" runat="server" CssClass="auto-style18" Text="Department"></asp:Label>
                     </strong></td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server" Height="17px" Width="123px">
+                    <asp:DropDownList ID="DropDownList2" runat="server" Height="17px" Width="123px" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name] FROM [Department]"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>

@@ -43,7 +43,10 @@ namespace project
             TextBox5.Text = ds.Tables[0].Rows[0]["DOB"].ToString();
             DropDownList1.SelectedValue = ds.Tables[0].Rows[0]["AccessType"].ToString();
             TextBox6.Text = ds.Tables[0].Rows[0]["PhoneNumber"].ToString();
-            DropDownList2.SelectedValue = ds.Tables[0].Rows[0]["Department"].ToString();
+            if (DropDownList2.Items.FindByValue(ds.Tables[0].Rows[0]["Department"].ToString().Trim()) != null)
+            {
+                DropDownList2.SelectedValue = ds.Tables[0].Rows[0]["Department"].ToString().Trim();
+            }
             TextBox7.Text = ds.Tables[0].Rows[0]["Address"].ToString();
             con.Close();
 
