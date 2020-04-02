@@ -18,5 +18,20 @@ namespace project
         {
             throw new NotImplementedException();
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("elevatedusers.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("elevatedprofile.aspx");
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace project
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
-            getrollno();
+            getId();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -32,6 +32,7 @@ namespace project
             }
             else
             {
+                
                 Label8.ForeColor = System.Drawing.Color.Green;
                 Label8.Text = "Valid";
                 con.Open();
@@ -46,7 +47,7 @@ namespace project
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                getrollno();
+                getId();
 
                 Response.Redirect("login.aspx");
 
@@ -60,7 +61,7 @@ namespace project
         }
 
 
-        public void getrollno()
+        public void getId()
         {
             
             String myquery = "select Id from Users1";

@@ -17,7 +17,7 @@
         .auto-style5 {
             margin-left: 0px;
             height: 511px;
-            width: 586px;
+            width: 584px;
         }
         .auto-style6 {
             width: 240px;
@@ -35,10 +35,6 @@
         .auto-style11 {
             width: 240px;
             text-align: center;
-        }
-        .auto-style12 {
-            height: 27px;
-            width: 170px;
         }
         .auto-style13 {
             width: 170px;
@@ -58,10 +54,6 @@
             text-align: center;
             height: 36px;
         }
-        .auto-style18 {
-            height: 27px;
-            width: 170px;
-        }
         .auto-style19 {
             width: 240px;
             text-align: center;
@@ -72,7 +64,7 @@
             width: 170px;
         }
         .auto-style21 {
-            width: 240px;
+            width: 141px;
             text-align: center;
             font-size: medium;
         }
@@ -80,7 +72,33 @@
             font-size: 40px;
             text-align: center;
         }
-    </style>
+        .auto-style23 {
+            font-size: small;
+        }
+        .auto-style24 {
+            width: 141px;
+            text-align: center;
+        }
+        .auto-style25 {
+            width: 141px;
+            text-align: center;
+            height: 28px;
+        }
+        .auto-style26 {
+            width: 141px;
+            height: 27px;
+            text-align: center;
+        }
+        .auto-style27 {
+            width: 141px;
+            text-align: center;
+            height: 36px;
+        }
+        .auto-style28 {
+            width: 141px;
+            height: 32px;
+        }
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -93,7 +111,7 @@
             
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <strong>
-                    <asp:Button ID="Button7" runat="server" Text="Logout" PostBackUrl="~/login.aspx" CssClass="auto-style15" />
+                    <asp:Button ID="Button7" runat="server" Text="Logout" PostBackUrl="~/login.aspx" CssClass="auto-style15" OnClick="Button7_Click" />
             
             
                     </strong>
@@ -111,7 +129,7 @@
                                 <asp:Label ID="Label3" runat="server" CssClass="auto-style16" Text="Email Address"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style12">
+                            <td class="auto-style10">
                                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                             </td>
                         </tr>
@@ -119,29 +137,29 @@
                             <td class="auto-style11">
                                 <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" CssClass="auto-style15" Height="22px" />
                             </td>
-                            <td class="auto-style11">
+                            <td class="auto-style24">
                                 &nbsp;</td>
                             <td class="auto-style11">
                                 <strong>
                                 <asp:Label ID="Label4" runat="server" CssClass="auto-style16" Text="Password"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style12">
-                                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <td class="auto-style10">
+                                <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style11">
                                 <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" CssClass="auto-style15" Height="22px" />
                             </td>
-                            <td class="auto-style11">
+                            <td class="auto-style24">
                                 &nbsp;</td>
                             <td class="auto-style11">
                                 <strong>
                                 <asp:Label ID="Label5" runat="server" CssClass="auto-style16" Text="First Name"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style12">
+                            <td class="auto-style10">
                                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
                             </td>
                         </tr>
@@ -151,7 +169,7 @@
                                 <asp:Button ID="Button4" runat="server" Text="Access Requests" Width="128px" CssClass="auto-style15" Height="22px" />
                                 </strong>
                             </td>
-                            <td class="auto-style19">
+                            <td class="auto-style25">
                             </td>
                             <td class="auto-style19">
                                 <strong>
@@ -164,8 +182,9 @@
                         </tr>
                         <tr>
                             <td class="auto-style9">
-                                &nbsp;</td>
-                            <td class="auto-style9">
+                                <asp:Label ID="Label12" runat="server" CssClass="auto-style23" Text="Label" Visible="False"></asp:Label>
+                            </td>
+                            <td class="auto-style26">
                                 &nbsp;</td>
                             <td class="auto-style9">
                                 <strong>
@@ -173,20 +192,20 @@
                                 </strong>
                             </td>
                             <td class="auto-style10">
-                                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox5" runat="server" TextMode="Date"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style11">
                                 &nbsp;</td>
-                            <td class="auto-style11">
+                            <td class="auto-style24">
                                 &nbsp;</td>
                             <td class="auto-style11">
                                 <strong>
                                 <asp:Label ID="Label8" runat="server" CssClass="auto-style16" Text="Access Type"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style12">
+                            <td class="auto-style10">
                                 <asp:DropDownList ID="DropDownList1" runat="server">
                                     <asp:ListItem>Administrator</asp:ListItem>
                                     <asp:ListItem>Recruiter</asp:ListItem>
@@ -197,28 +216,28 @@
                         <tr>
                             <td class="auto-style17">
                                 &nbsp;</td>
-                            <td class="auto-style17">
+                            <td class="auto-style27">
                                 &nbsp;</td>
                             <td class="auto-style17">
                                 <strong>
                                 <asp:Label ID="Label9" runat="server" CssClass="auto-style16" Text="Phone number"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style18">
+                            <td class="auto-style10">
                                 <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style11">
                                 &nbsp;</td>
-                            <td class="auto-style11">
+                            <td class="auto-style24">
                                 &nbsp;</td>
                             <td class="auto-style11">
                                 <strong>
                                 <asp:Label ID="Label10" runat="server" CssClass="auto-style16" Text="Department"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style12">
+                            <td class="auto-style10">
                                 <asp:DropDownList ID="DropDownList2" runat="server">
                                     <asp:ListItem>Information Technology</asp:ListItem>
                                     <asp:ListItem>Technology</asp:ListItem>
@@ -231,21 +250,21 @@
                         <tr>
                             <td class="auto-style11">
                                 &nbsp;</td>
-                            <td class="auto-style11">
+                            <td class="auto-style24">
                                 &nbsp;</td>
                             <td class="auto-style11">
                                 <strong>
                                 <asp:Label ID="Label11" runat="server" CssClass="auto-style16" Text="Address"></asp:Label>
                                 </strong>
                             </td>
-                            <td class="auto-style12">
+                            <td class="auto-style10">
                                 <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style6">
                                 &nbsp;</td>
-                            <td class="auto-style6">
+                            <td class="auto-style28">
                                 &nbsp;</td>
                             <td class="auto-style6">
                                 <strong>

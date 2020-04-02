@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="edituser.aspx.cs" Inherits="project.edituser" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminedituser.aspx.cs" Inherits="project.edituser" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +14,7 @@
         .auto-style5 {
             margin-left: 0px;
             height: 429px;
-            width: 879px;
+            width: 1203px;
         }
         .auto-style6 {
             width: 240px;
@@ -169,6 +169,9 @@
        .newStyle1 {
            font-size: 40px;
        }
+       .auto-style55 {
+           width: 604px;
+       }
     </style>
 </head>
 <body>
@@ -179,7 +182,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              
                 <asp:Label ID="Label1" runat="server" CssClass="newStyle1" Text="Workforce Management"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button7" runat="server" Text="Logout" PostBackUrl="~/login.aspx" Height="22px" Width="128px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button7" runat="server" Text="Logout" PostBackUrl="~/login.aspx" Height="22px" Width="128px" OnClick="Button7_Click" />
             &nbsp;&nbsp;
             </h2>
              <br />
@@ -218,6 +221,9 @@
                             <td class="auto-style41">
                                 <asp:TextBox ID="TextBox2" runat="server" Height="22px" Width="128px"></asp:TextBox>
                             </td>
+                            <td class="auto-style55">
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Attention! Password must have atleast 8 characters including atleast 1 numeric character, atleast 1 lowercase letter, atleast 1 uppercase letter, atleast 1 special character" ValidationExpression="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&amp;*-]).{8,}$"></asp:RegularExpressionValidator>
+                            </td>
                         </tr>
                         <tr>
                             <td class="auto-style24">
@@ -248,7 +254,7 @@
                                 <asp:Label ID="Label7" runat="server" CssClass="auto-style8" Text="D.O.B"></asp:Label>
                             </td>
                             <td class="auto-style10">
-                                <asp:TextBox ID="TextBox5" runat="server" Height="21px" Width="128px"></asp:TextBox>
+                                <asp:TextBox ID="TextBox5" runat="server" Height="21px" Width="128px" TextMode="Date"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
@@ -259,6 +265,8 @@
                             </td>
                             <td class="auto-style47">
                                 <asp:DropDownList ID="DropDownList1" runat="server" Height="22px" Width="128px">
+                                    <asp:ListItem>Supervisor</asp:ListItem>
+                                    <asp:ListItem>Recruiter</asp:ListItem>
                                 </asp:DropDownList>
                             </td>
                         </tr>
@@ -279,8 +287,14 @@
                                 <asp:Label ID="Label10" runat="server" CssClass="auto-style8" Text="Department"></asp:Label>
                             </td>
                             <td class="auto-style48">
-                                <asp:DropDownList ID="DropDownList2" runat="server" Height="22px" Width="128px">
+                                <asp:DropDownList ID="DropDownList2" runat="server" Height="22px" Width="134px" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name">
+                                    <asp:ListItem>Information Technology</asp:ListItem>
+                                    <asp:ListItem>Technology</asp:ListItem>
+                                    <asp:ListItem>Banking</asp:ListItem>
+                                    <asp:ListItem>Food and Restaurant</asp:ListItem>
+                                    <asp:ListItem>Mechanical</asp:ListItem>
                                 </asp:DropDownList>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name] FROM [Department]"></asp:SqlDataSource>
                             </td>
                         </tr>
                         <tr>
@@ -300,7 +314,7 @@
                                 <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <asp:Button ID="Button5" runat="server" Text="Save" CssClass="auto-style54" Height="22px" Width="128px" />
+                                <asp:Button ID="Button5" runat="server" Text="Save" CssClass="auto-style54" Height="22px" Width="128px" OnClick="Button5_Click" />
                                 </strong>
                             </td>
                             <td class="auto-style13">

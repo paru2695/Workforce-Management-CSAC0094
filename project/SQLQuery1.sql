@@ -1,1 +1,1 @@
-﻿DELETE FROM USERS1
+﻿Alter table Request drop column UserId

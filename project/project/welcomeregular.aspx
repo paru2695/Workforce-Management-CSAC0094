@@ -43,6 +43,13 @@
             font-style: italic;
             font-size: 20px;
         }
+        .auto-style8 {
+            width: 104px;
+            height: 26px;
+        }
+        .auto-style9 {
+            height: 26px;
+        }
     </style>
 </head>
 <body style="width: 876px; height: 410px;">
@@ -54,19 +61,19 @@
                 <asp:Label ID="Label9" runat="server" CssClass="newStyle2" Height="72px" Text="Workforce Management" Width="536px"></asp:Label>
                 </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <strong>
-                <asp:Button ID="Button5" runat="server" PostBackUrl="~/login.aspx" Text="Logout" CssClass="auto-style6" Height="22px" Width="128px" />
+                <asp:Button ID="Button5" runat="server" PostBackUrl="~/login.aspx" Text="Logout" CssClass="auto-style6" Height="22px" Width="128px" OnClick="Button5_Click" />
                     </strong>
                 <br />
                 <br />
                 </div>
                 <table class="auto-style3">
                     <tr>
-                        <td class="auto-style4">
+                        <td class="auto-style8">
                             <strong>
-                            <asp:Button ID="Button3" runat="server" Text="Welcome" CssClass="auto-style6" Height="22px" Width="128px" />
+                            <asp:Button ID="Button3" runat="server" Text="Welcome" CssClass="auto-style6" Height="22px" Width="128px" OnClick="Button3_Click" PostBackUrl="~/welcomeregular.aspx" />
                             </strong>
                         </td>
-                        <td>&nbsp;</td>
+                        <td class="auto-style9"></td>
                     </tr>
                     <tr>
                         <td class="auto-style4">

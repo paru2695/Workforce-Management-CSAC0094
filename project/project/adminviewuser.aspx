@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="user.aspx.cs" Inherits="project.user" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminviewuser.aspx.cs" Inherits="project.user" %>
 
 <!DOCTYPE html>
 
@@ -73,7 +73,7 @@
             <h2 class="auto-style13">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label1" runat="server" CssClass="newStyle3" Text="Workforce Management"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><asp:Button ID="Button6" runat="server" PostBackUrl="~/login.aspx" Text="Logout" CssClass="auto-style11" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><asp:Button ID="Button6" runat="server" PostBackUrl="~/login.aspx" Text="Logout" CssClass="auto-style11" OnClick="Button6_Click" />
                 </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </h2>
              <br />
@@ -82,7 +82,7 @@
                     <tr>
                         <td class="auto-style14">
                             <strong>
-                            <asp:Button ID="Button3" runat="server" Height="30px" Text="Welcome" Width="116px" CssClass="auto-style11" />
+                            <asp:Button ID="Button3" runat="server" Height="30px" Text="Welcome" Width="145px" CssClass="auto-style11" />
                             </strong>
                         </td>
                         <td class="auto-style15">
@@ -96,7 +96,7 @@
                     <tr>
                         <td class="auto-style6">
                             <strong>
-                            <asp:Button ID="Button4" runat="server" Height="30px" Text="My profile" Width="115px" CssClass="auto-style11" />
+                            <asp:Button ID="Button4" runat="server" Height="30px" Text="My profile" Width="145px" CssClass="auto-style11" OnClick="Button4_Click" />
                             </strong>
                         </td>
                         <td class="auto-style9">
@@ -105,12 +105,13 @@
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Height="22px" Width="128px"></asp:TextBox>
                         &nbsp;
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Attention! Password must have atleast 8 characters including atleast 1 numeric character, atleast 1 lowercase letter, atleast 1 uppercase letter, atleast 1 special character" ForeColor="Red" ValidationExpression="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&amp;*-]).{8,}$"></asp:RegularExpressionValidator>
-                        </td>
+                            </td>
                         <td class="auto-style10"></td>
                     </tr>
                     <tr>
-                        <td class="auto-style7">&nbsp;</td>
+                        <td class="auto-style6"><strong>
+                            <asp:Button ID="Button7" runat="server" Height="30px" Text="Users" Width="141px" OnClick="Button7_Click" CssClass="auto-style11" />
+                            </strong></td>
                         <td class="auto-style9">
                             <strong>
                             <asp:Label ID="Label4" runat="server" Text="First Name" CssClass="auto-style10"></asp:Label>
@@ -120,7 +121,9 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="auto-style7">&nbsp;</td>
+                        <td class="auto-style6"><strong>
+                            <asp:Button ID="Button8" runat="server" Height="30px" Text="Access Requests" Width="145px" OnClick="Button8_Click" CssClass="auto-style11" />
+                            </strong></td>
                         <td class="auto-style9">
                             <strong>
                             <asp:Label ID="Label5" runat="server" Text="Last Name" CssClass="auto-style10"></asp:Label>
@@ -160,7 +163,7 @@
                             <strong>
                             <asp:Label ID="Label8" runat="server" Text="Phone Number" CssClass="auto-style10"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox6" runat="server" TextMode="Number" Width="128px" Height="22px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox6" runat="server" TextMode="Phone" Width="128px" Height="22px"></asp:TextBox>
                         </td>
                         <td>&nbsp;</td>
                     </tr>

@@ -78,11 +78,15 @@
   <ItemGroup>
     <Content Include="AccessRequests.aspx" />
     <Content Include="adduser.aspx" />
+    <Content Include="adminprofile.aspx" />
     <Content Include="adminusers.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="elevatededituser.aspx" />
+    <Content Include="elevatedprofile.aspx" />
+    <Content Include="elevatedviewuser.aspx" />
     <Content Include="images\214-2140212_businessman-wallpapers-business-man.jpg" />
     <Content Include="images\adduser.jpg" />
     <Content Include="images\admin.jpg" />
@@ -96,8 +100,8 @@
     <Content Include="images\final2.jpg" />
     <Content Include="images\Jellyfish.jpg" />
     <Content Include="images\loginpic1.jpg" />
-    <Content Include="elevatedatausers.aspx" />
-    <Content Include="edituser.aspx" />
+    <Content Include="elevatedusers.aspx" />
+    <Content Include="adminedituser.aspx" />
     <Content Include="images\photo-1533450718592-29d45635f0a9 %281%29.jpg" />
     <Content Include="images\req.jpg" />
     <Content Include="images\request user.jpeg" />
@@ -106,7 +110,7 @@
     <Content Include="images\uuuuuuuu.jpg" />
     <Content Include="images\welcomeuser.jpg" />
     <Content Include="signup.aspx" />
-    <Content Include="user.aspx" />
+    <Content Include="adminviewuser.aspx" />
     <Content Include="userrequest.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -131,6 +135,13 @@
     <Compile Include="adduser.aspx.designer.cs">
       <DependentUpon>adduser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="adminprofile.aspx.cs">
+      <DependentUpon>adminprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminprofile.aspx.designer.cs">
+      <DependentUpon>adminprofile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="adminusers.aspx.cs">
       <DependentUpon>adminusers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,19 +149,40 @@
     <Compile Include="adminusers.aspx.designer.cs">
       <DependentUpon>adminusers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="elevatedatausers.aspx.cs">
-      <DependentUpon>elevatedatausers.aspx</DependentUpon>
+    <Compile Include="elevatededituser.aspx.cs">
+      <DependentUpon>elevatededituser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="elevatedatausers.aspx.designer.cs">
-      <DependentUpon>elevatedatausers.aspx</DependentUpon>
+    <Compile Include="elevatededituser.aspx.designer.cs">
+      <DependentUpon>elevatededituser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="edituser.aspx.cs">
-      <DependentUpon>edituser.aspx</DependentUpon>
+    <Compile Include="elevatedprofile.aspx.cs">
+      <DependentUpon>elevatedprofile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="edituser.aspx.designer.cs">
-      <DependentUpon>edituser.aspx</DependentUpon>
+    <Compile Include="elevatedprofile.aspx.designer.cs">
+      <DependentUpon>elevatedprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="elevatedusers.aspx.cs">
+      <DependentUpon>elevatedusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="elevatedusers.aspx.designer.cs">
+      <DependentUpon>elevatedusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminedituser.aspx.cs">
+      <DependentUpon>adminedituser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminedituser.aspx.designer.cs">
+      <DependentUpon>adminedituser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="elevatedviewuser.aspx.cs">
+      <DependentUpon>elevatedviewuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="elevatedviewuser.aspx.designer.cs">
+      <DependentUpon>elevatedviewuser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signup.aspx.cs">
@@ -167,12 +199,12 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user.aspx.cs">
-      <DependentUpon>user.aspx</DependentUpon>
+    <Compile Include="adminviewuser.aspx.cs">
+      <DependentUpon>adminviewuser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user.aspx.designer.cs">
-      <DependentUpon>user.aspx</DependentUpon>
+    <Compile Include="adminviewuser.aspx.designer.cs">
+      <DependentUpon>adminviewuser.aspx</DependentUpon>
     </Compile>
     <Compile Include="userrequest.aspx.cs">
       <DependentUpon>userrequest.aspx</DependentUpon>

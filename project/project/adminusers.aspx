@@ -91,7 +91,7 @@
          <div class="auto-style1" style="background-image: url('images/signup.png')">
             <h2 class="auto-style17">
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style2" Text="Workforce Management"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button10" runat="server" Text="Logout" PostBackUrl="~/login.aspx" Height="22px" Width="128px" />
+                <asp:Button ID="Button10" runat="server" Text="Logout" PostBackUrl="~/login.aspx" Height="22px" Width="128px" OnClick="Button10_Click" />
              </h2>
                 <br />
                 <table class="auto-style3">
@@ -104,7 +104,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style4">
-                            <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" />
+                            <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" OnClick="Button2_Click" />
                         </td>
                         <td class="auto-style5"><strong>
                             <asp:Label ID="Label2" runat="server" Text="USERS" CssClass="auto-style16"></asp:Label>
@@ -118,11 +118,11 @@
                         <td class="auto-style24">
                             </td>
                         <td class="auto-style25">
-                            <asp:Button ID="Button8" runat="server" Text="Create" Width="128px" Height="22px" />
+                            <asp:Button ID="Button8" runat="server" Text="Create" Width="128px" Height="22px" OnClick="Button8_Click" />
 &nbsp;
-                            <asp:Button ID="Button4" runat="server" Text="View" Width="128px" Height="22px" />
+                            <asp:Button ID="Button4" runat="server" Text="View" Width="128px" Height="22px" OnClick="Button4_Click" />
 &nbsp;
-                            <asp:Button ID="Button5" runat="server" Height="22px" Text="Edit" Width="128px" />
+                            <asp:Button ID="Button5" runat="server" Height="22px" Text="Edit" Width="128px" OnClick="Button5_Click" />
                         &nbsp;&nbsp;
                             <asp:Button ID="Button7" runat="server" Text="Delete" Width="128px" Height="22px" OnClick="Button7_Click" />
                         </td>
@@ -143,7 +143,7 @@
                             <br />
                             <asp:Label ID="Label3" runat="server" CssClass="auto-style10" Text="Department"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:DropDownList ID="DropDownList1" runat="server" Width="153px" DataSourceID="SqlDataSource2" DataTextField="Name" DataValueField="Name">
+                            <asp:DropDownList ID="DropDownList1" runat="server" Width="153px" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="Name" DataValueField="Name" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Name] FROM [Department]"></asp:SqlDataSource>
                         </td>
@@ -151,7 +151,6 @@
                             <br />
                             <br />
                             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-&nbsp;
                             <asp:Button ID="Button6" runat="server" Text="Search" Height="22px" Width="128px" OnClick="Button6_Click" />
                         </td>
                     </tr>
@@ -162,30 +161,30 @@
              
             
 
-            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="auto-style26" Width="609px">
-                 <AlternatingRowStyle BackColor="White" />
-                 <Columns>
-                     <asp:TemplateField>
-                         <ItemTemplate>
-                             <asp:CheckBox ID="CheckBox1" runat="server" />
-                         </ItemTemplate>
-                     </asp:TemplateField>
-                     <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" >
-                     <ItemStyle HorizontalAlign="Center" />
-                     </asp:BoundField>
-                     <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" >
-                     <ItemStyle HorizontalAlign="Center" />
-                     </asp:BoundField>
-                     <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" >
-                     <ItemStyle HorizontalAlign="Center" />
-                     </asp:BoundField>
-                     <asp:BoundField DataField="AccessType" HeaderText="AccessType" SortExpression="AccessType" >
-                     <ItemStyle HorizontalAlign="Center" />
-                     </asp:BoundField>
-                     <asp:BoundField DataField="Name" HeaderText="Department" SortExpression="Name" >
-                     <ItemStyle HorizontalAlign="Center" />
-                     </asp:BoundField>
-                 </Columns>
+            <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="auto-style26" Width="609px">
+               <Columns>
+                   <asp:TemplateField>
+                       <ItemTemplate>
+                           <asp:CheckBox ID="CheckBox1" runat="server" />
+                       </ItemTemplate>
+                   </asp:TemplateField>
+                   <asp:BoundField DataField="Id" HeaderText="Id" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                   </asp:BoundField>
+                   <asp:BoundField DataField="FirstName" HeaderText="FirstName" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                   </asp:BoundField>
+                   <asp:BoundField DataField="LastName" HeaderText="LastName" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                   </asp:BoundField>
+                   <asp:BoundField DataField="AccessType" HeaderText="AccessType" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                   </asp:BoundField>
+                   <asp:BoundField DataField="Department" HeaderText="Department" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                   </asp:BoundField>
+               </Columns>
+                <AlternatingRowStyle BackColor="White" />
                  <EditRowStyle BackColor="#2461BF" />
                  <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                  <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -197,7 +196,6 @@
                  <SortedDescendingCellStyle BackColor="#E9EBEF" />
                  <SortedDescendingHeaderStyle BackColor="#4870BE" />
              </asp:GridView>
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Users1.FirstName, Users1.LastName, Users1.Id, Users1.AccessType, Department.Name FROM Users1 INNER JOIN Department ON Users1.Id = Department.Id"></asp:SqlDataSource>
             
 
             

@@ -17,7 +17,7 @@ namespace project
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] == null)
+            if (Session["userid"] == null)
             {
                 Response.Redirect("login.aspx");
             }
@@ -30,16 +30,26 @@ namespace project
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\satnam\source\repos\project\project\App_Data\Database1.mdf;Integrated Security=True");
         protected void Button4_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("userrequest.aspx");
         }
 
         public void showData()
         {
             con.Open();
-            cmd.CommandText = "Select * from Users1 where EmailAddress = '" + Session["user"] + "' ";
+            cmd.CommandText = "Select * from Users1 where Id = '" + Session["userid"] + "' ";
             cmd.Connection = con;
             sda.SelectCommand = cmd;
             sda.Fill(ds);
+            
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
             
         }
     }

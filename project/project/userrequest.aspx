@@ -87,10 +87,12 @@
         }
         .auto-style27 {
             height: 32px;
+            text-align: left;
         }
         .auto-style28 {
             height: 48px;
             width: 332px;
+            text-align: left;
         }
         .auto-style29 {
             height: 48px;
@@ -108,7 +110,7 @@
             <h2 class="auto-style23">
                 <asp:Label ID="Label1" runat="server" CssClass="newStyle1" Text="Workforce Management"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>
-                <asp:Button ID="Button7" runat="server" PostBackUrl="~/login.aspx" Text="Logout" CssClass="auto-style24" Height="22px" Width="128px" />
+                <asp:Button ID="Button7" runat="server" Text="Logout" CssClass="auto-style24" Height="22px" Width="128px" OnClick="Button7_Click" />
                 </strong>
                 </h2>
                 <br />
@@ -189,8 +191,7 @@
                             </asp:DropDownList>
                         </td>
                         <td class="auto-style27">
-                            <asp:Label ID="Label12" runat="server" Text="Active" Visible="False"></asp:Label>
-                        </td>
+                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td class="auto-style8">&nbsp;</td>
@@ -198,7 +199,7 @@
                             <strong>
                             <asp:Label ID="Label8" runat="server" Text="Phone Number"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox6" runat="server" TextMode="Number" Height="22px" Width="128px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox6" runat="server" Height="22px" Width="128px"></asp:TextBox>
                         </td>
                         <td>&nbsp;</td>
                     </tr>
@@ -229,12 +230,14 @@
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="auto-style28"></td>
+                        <td class="auto-style28">
+                            <asp:Label ID="Label11" runat="server" Visible="False"></asp:Label>
+                            <asp:Label ID="Label12" runat="server" Visible="False"></asp:Label>
+                        </td>
                         <td class="auto-style29">
                             <strong>
                             <asp:Button ID="Button5" runat="server" Text="Edit" OnClick="Button5_Click" CssClass="auto-style24" Height="22px" Width="66px" />
                             </strong>
-                            <asp:Label ID="Label11" runat="server"></asp:Label>
                         </td>
                         <td class="auto-style30"></td>
                     </tr>
