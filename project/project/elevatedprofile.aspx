@@ -47,6 +47,8 @@
         <div class="auto-style1">
             <h2>
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style2" Text="Workforce Management"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="logout" />
                 <table class="auto-style3">
                     <tr>
                         <td class="auto-style4"><strong>

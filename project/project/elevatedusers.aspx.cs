@@ -136,5 +136,15 @@ namespace project
                 }
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("welcomeelevated.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("elevatedprofile.aspx");
+        }
     }
 }

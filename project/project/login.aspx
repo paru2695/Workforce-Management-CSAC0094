@@ -92,7 +92,7 @@
                     </td>
                     <td>
                         <strong>
-                        <asp:Button ID="Button2" runat="server" PostBackUrl="~/signup.aspx" Text="signup" CssClass="auto-style5" />
+                        <asp:Button ID="Button2" runat="server" PostBackUrl="~/signup.aspx" Text="signup" CssClass="auto-style5" OnClick="Button2_Click" />
                         </strong>
                     </td>
                 </tr>

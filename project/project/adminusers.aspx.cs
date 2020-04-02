@@ -179,7 +179,22 @@ namespace project
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            Response.Redirect("adminprofile.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("welcomeadmin.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AccessRequests.aspx");
         }
     }
 }

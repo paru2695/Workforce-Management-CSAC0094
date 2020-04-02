@@ -58,12 +58,14 @@
         <div class="auto-style1">
             <h2><strong>
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style2" Text="Workforce Management"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="logout" />
                 </strong></h2>
         </div>
         <table class="auto-style3">
             <tr>
                 <td class="auto-style10"><strong>
-                    <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Height="30px" Text="Welcome" Width="145px" />
+                    <asp:Button ID="Button1" runat="server" CssClass="auto-style4" Height="30px" Text="Welcome" Width="145px" OnClick="Button1_Click" />
                     </strong></td>
                 <td class="auto-style14"><strong>
                     <asp:Label ID="Label2" runat="server" CssClass="auto-style18" Text="Email Address"></asp:Label>
@@ -74,7 +76,7 @@
             </tr>
             <tr>
                 <td class="auto-style19"><strong>
-                    <asp:Button ID="Button2" runat="server" CssClass="auto-style4" Height="30px" Text="My Profile" Width="145px" />
+                    <asp:Button ID="Button2" runat="server" CssClass="auto-style4" Height="30px" Text="My Profile" Width="145px" OnClick="Button2_Click" />
                     </strong></td>
                 <td class="auto-style20"><strong>
                     <asp:Label ID="Label3" runat="server" CssClass="auto-style18" Text="Password"></asp:Label>
@@ -85,7 +87,7 @@
             </tr>
             <tr>
                 <td class="auto-style19"><strong>
-                    <asp:Button ID="Button3" runat="server" CssClass="auto-style4" Height="30px" Text="Users" Width="145px" />
+                    <asp:Button ID="Button3" runat="server" CssClass="auto-style4" Height="30px" Text="Users" Width="145px" OnClick="Button3_Click" />
                     </strong></td>
                 <td class="auto-style20"><strong>
                     <asp:Label ID="Label4" runat="server" CssClass="auto-style18" Text="First Name"></asp:Label>

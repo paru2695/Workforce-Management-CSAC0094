@@ -72,5 +72,20 @@ namespace project
         {
             Response.Redirect("elevatedusers.aspx");
         }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("welcomeelevated.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("elevatedusers.aspx");
+        }
     }
 }

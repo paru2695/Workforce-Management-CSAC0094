@@ -202,7 +202,7 @@
                         <tr>
                             <td class="auto-style53">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" />
+                                <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" OnClick="Button1_Click" />
                             </td>
                             <td class="auto-style11">
                                 <asp:Label ID="Label3" runat="server" CssClass="auto-style8" Text="Email Address"></asp:Label>
@@ -213,7 +213,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style39">
-                                <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" />
+                                <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" OnClick="Button2_Click" />
                             </td>
                             <td class="auto-style40">
                                 <asp:Label ID="Label4" runat="server" CssClass="auto-style8" Text="Password"></asp:Label>
@@ -227,7 +227,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style24">
-                                <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" Height="22px" />
+                                <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" Height="22px" OnClick="Button3_Click" />
                             </td>
                             <td class="auto-style25">
                                 <asp:Label ID="Label5" runat="server" CssClass="auto-style8" Text="First Name"></asp:Label>
@@ -238,7 +238,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style27">
-                                <asp:Button ID="Button4" runat="server" Text="Access Requests" Width="128px" Height="22px" />
+                                <asp:Button ID="Button4" runat="server" Text="Access Requests" Width="128px" Height="22px" OnClick="Button4_Click" />
                             </td>
                             <td class="auto-style28">
                                 <asp:Label ID="Label6" runat="server" CssClass="auto-style8" Text="Last Name"></asp:Label>
@@ -320,7 +320,7 @@
                             <td class="auto-style13">
                                 <strong>
                                 <br />
-                                <asp:Button ID="Button6" runat="server" Text="Cancel" CssClass="auto-style54" Height="22px" Width="128px" />
+                                <asp:Button ID="Button6" runat="server" Text="Cancel" CssClass="auto-style54" Height="22px" Width="128px" OnClick="Button6_Click" />
                                 </strong>
                             </td>
                         </tr>

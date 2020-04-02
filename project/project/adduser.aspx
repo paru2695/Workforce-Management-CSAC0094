@@ -119,7 +119,7 @@
                         <tr>
                             <td class="auto-style11">
                                 <strong>
-                                <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" CssClass="auto-style15" Height="22px" />
+                                <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" CssClass="auto-style15" Height="22px" OnClick="Button1_Click" />
                                 </strong>
                             </td>
                             <td class="auto-style21">
@@ -135,7 +135,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style11">
-                                <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" CssClass="auto-style15" Height="22px" />
+                                <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" CssClass="auto-style15" Height="22px" OnClick="Button2_Click" />
                             </td>
                             <td class="auto-style24">
                                 &nbsp;</td>
@@ -150,7 +150,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style11">
-                                <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" CssClass="auto-style15" Height="22px" />
+                                <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" CssClass="auto-style15" Height="22px" OnClick="Button3_Click" />
                             </td>
                             <td class="auto-style24">
                                 &nbsp;</td>
@@ -166,7 +166,7 @@
                         <tr>
                             <td class="auto-style19">
                                 <strong>
-                                <asp:Button ID="Button4" runat="server" Text="Access Requests" Width="128px" CssClass="auto-style15" Height="22px" />
+                                <asp:Button ID="Button4" runat="server" Text="Access Requests" Width="128px" CssClass="auto-style15" Height="22px" OnClick="Button4_Click" />
                                 </strong>
                             </td>
                             <td class="auto-style25">
@@ -273,7 +273,7 @@
                             </td>
                             <td class="auto-style13">
                                 <strong>
-                                <asp:Button ID="Button6" runat="server" Text="Cancel" CssClass="auto-style15" />
+                                <asp:Button ID="Button6" runat="server" Text="Cancel" CssClass="auto-style15" OnClick="Button6_Click" />
                                 </strong>
                             </td>
                         </tr>

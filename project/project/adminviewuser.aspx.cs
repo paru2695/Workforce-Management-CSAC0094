@@ -70,7 +70,12 @@ namespace project
 
         protected void Button4_Click(object sender, EventArgs e)
         {
+            Response.Redirect("adminprofile.aspx");
+        }
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("welcomeadmin.aspx");
         }
     }
 

@@ -85,14 +85,14 @@
                 <table class="auto-style3">
                     <tr>
                         <td class="auto-style4">
-                            <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" />
+                            <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" OnClick="Button1_Click" />
                         </td>
                         <td class="auto-style5">&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="auto-style4">
-                            <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" />
+                            <asp:Button ID="Button2" runat="server" Text="My Profile" Width="128px" Height="22px" OnClick="Button2_Click" />
                         </td>
                         <td class="auto-style5"><strong>
                             <asp:Label ID="Label2" runat="server" Text="ACCESS REQUESTS" CssClass="auto-style16"></asp:Label>

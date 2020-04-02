@@ -71,11 +71,13 @@
         <div class="auto-style1">
             <h2><strong>
                 <asp:Label ID="Label1" runat="server" CssClass="auto-style2" Text="Workforce Management"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="logout" />
                 </strong>
                 <table class="auto-style3">
                     <tr>
                         <td class="auto-style13"><strong>
-                            <asp:Button ID="Button1" runat="server" CssClass="auto-style5" Height="30px" Text="Welcome" Width="145px" />
+                            <asp:Button ID="Button1" runat="server" CssClass="auto-style5" Height="30px" Text="Welcome" Width="145px" OnClick="Button1_Click" />
                             </strong></td>
                         <td class="auto-style14">
                             <asp:Label ID="Label2" runat="server" CssClass="auto-style8" Text="Email Address"></asp:Label>
@@ -168,7 +170,7 @@
                             <asp:Button ID="Button4" runat="server" CssClass="auto-style5" Text="Save" OnClick="Button4_Click" />
                             </strong></td>
                         <td class="auto-style16"><strong>
-                            <asp:Button ID="Button5" runat="server" CssClass="auto-style5" Text="Cancel" />
+                            <asp:Button ID="Button5" runat="server" CssClass="auto-style5" Text="Cancel" OnClick="Button5_Click" />
                             </strong></td>
                     </tr>
                 </table>

@@ -178,5 +178,15 @@ namespace project
         {
             Response.Redirect("login.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("welcomeadmin.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminprofile.aspx");
+        }
     }
 }

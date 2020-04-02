@@ -97,7 +97,7 @@
                 <table class="auto-style3">
                     <tr>
                         <td class="auto-style21">
-                            <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" />
+                            <asp:Button ID="Button1" runat="server" Text="Welcome" Width="128px" Height="22px" OnClick="Button1_Click" />
                         </td>
                         <td class="auto-style22"></td>
                         <td class="auto-style20"></td>
@@ -113,7 +113,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style23">
-                            <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" Height="22px" />
+                            <asp:Button ID="Button3" runat="server" Text="Users" Width="128px" Height="22px" OnClick="Button3_Click" />
                         </td>
                         <td class="auto-style24">
                             </td>
@@ -129,7 +129,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style13">
-                            <asp:Button ID="Button9" runat="server" Text="Access Requests" Width="128px" PostBackUrl="~/AccessRequests.aspx" Height="22px" />
+                            <asp:Button ID="Button9" runat="server" Text="Access Requests" Width="128px" PostBackUrl="~/AccessRequests.aspx" Height="22px" OnClick="Button9_Click" />
                         </td>
                         <td class="auto-style14">
                         </td>
