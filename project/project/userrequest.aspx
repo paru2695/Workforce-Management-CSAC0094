@@ -140,7 +140,7 @@
                             <strong>
                             <asp:Label ID="Label3" runat="server" Text="Password"></asp:Label>
                             </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" Height="22px" Width="128px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" Height="22px" Width="128px"></asp:TextBox>
                         </td>
                         <td class="auto-style10"></td>
                     </tr>
@@ -190,7 +190,7 @@
                             </asp:DropDownList>
                         </td>
                         <td class="auto-style27">
-                            <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Label13" runat="server"></asp:Label>
                         </td>
                     </tr>
                     <tr>

@@ -158,16 +158,25 @@ namespace project
               Email = dt.Rows[i]["EmailAddress"].ToString();
               Password = dt.Rows[i]["Password"].ToString();
 
-               if (Session["user"]!=null)
+                if (Session["user"] != null)
 
-               {
+                {
 
                     if (dt.Rows[i]["RequestStatus"].ToString() == "Active")
+                    {
+                        Button6.Visible = false;
                         Label13.Text = "Your request is Active.";
+                    }
                     else if (dt.Rows[i]["RequestStatus"].ToString() == "Approved")
+                    {
+                        Button6.Visible = false;
                         Label13.Text = "Your request is Approved.";
+                    }
                     else if (dt.Rows[i]["RequestStatus"].ToString() == "Declined")
+                    {
+                        Button6.Visible = false;
                         Label13.Text = "Your request is Declined.";
+                    }
                     else if (dt.Rows[i]["RequestStatus"].ToString() == " ")
                         Label13.Visible = false;
                }
