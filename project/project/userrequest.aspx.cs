@@ -19,11 +19,12 @@ namespace project
         protected void Page_Load(object sender, EventArgs e)
         {
             getId();
+            LabelType();
             if (Session["userid"] == null)
             {
                 Response.Redirect("login.aspx");
             }
-
+            
             if (!IsPostBack)
             showData();
             
@@ -131,10 +132,54 @@ namespace project
             }
 
         }
+        public object Messagebox { get; private set; }
 
-        
+        public void LabelType()
+        {
+            int RowCount;
+            string Email,Password;
+            int convertKey = Convert.ToInt32(Session["userid"]);
+
+
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\satnam\source\repos\project\project\App_Data\Database1.mdf;Integrated Security=True");
+            con.Open();
+            SqlCommand cmdd = new SqlCommand("select Users1.EmailAddress,Users1.Password,Users1.RId,Request.RequestStatus,Request.RequestId from Users1 inner join Request on users1.RId = Request.RequestId where Users1.Id = @Id", con);
+            cmdd.Parameters.AddWithValue("@Id", convertKey);
+            cmdd.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter
+            {
+                SelectCommand = cmdd
+            };
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            RowCount = dt.Rows.Count;
+            for (int i = 0; i < RowCount; i++)
+            {
+              Email = dt.Rows[i]["EmailAddress"].ToString();
+              Password = dt.Rows[i]["Password"].ToString();
+
+               if (Session["user"]!=null)
+
+               {
+
+                    if (dt.Rows[i]["RequestStatus"].ToString() == "Active")
+                        Label13.Text = "Your request is Active.";
+                    else if (dt.Rows[i]["RequestStatus"].ToString() == "Approved")
+                        Label13.Text = "Your request is Approved.";
+                    else if (dt.Rows[i]["RequestStatus"].ToString() == "Declined")
+                        Label13.Text = "Your request is Declined.";
+                    else if (dt.Rows[i]["RequestStatus"].ToString() == " ")
+                        Label13.Visible = false;
+               }
+                        
+            }
+        }
     }
+
 }
+
+   
+
 
     
 

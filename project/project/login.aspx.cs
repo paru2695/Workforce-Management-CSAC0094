@@ -31,7 +31,7 @@ namespace project
         protected void Button1_Click(object sender, EventArgs e)
         {
             int RowCount;
-            string UserId,Email, Password;
+            string UserId,Email, Password, RId;
             
                 using (SqlCommand cmd = new SqlCommand("loginType", con))
                 {
@@ -45,12 +45,13 @@ namespace project
                             UserId = dt.Rows[i]["Id"].ToString();
                             Email = dt.Rows[i]["EmailAddress"].ToString();
                             Password = dt.Rows[i]["Password"].ToString();
-                            
+                            RId = dt.Rows[i]["RId"].ToString();
 
-                            if (Email == TextBox1.Text && Password == TextBox2.Text)
+                        if (Email == TextBox1.Text && Password == TextBox2.Text)
                             {
                                 Session["userid"] = UserId;
                                 Session["user"] = Email;
+                                Session["Rid"] = RId;
                                 if (dt.Rows[i]["AccessType"].ToString() == "Administrator")
                                     Response.Redirect("welcomeadmin.aspx");
                                 else if (dt.Rows[i]["AccessType"].ToString() == "Supervisor")
